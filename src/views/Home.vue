@@ -23,26 +23,29 @@
             >
               <Portofolio v-if="item === 'Portofolio'" />
               <News v-if="item === 'News'" />
-              <Contact v-if="item === 'Contact'" />
+              <Twitter v-if="item === 'Twitter'" />
             </v-tab-item> </v-tabs-items
         ></v-card>
       </v-flex>
     </v-layout>
+    <br />
+    <Contact />
   </div>
 </template>
 
 <script>
 import Portofolio from "@/components/Portofolio";
 import News from "@/components/News";
-import Contact from "@/components/Contact";
+import Twitter from "@/components/Twitter";
 import Profile from "@/components/Profile";
+import Contact from "@/components/Contact";
 
 export default {
-  components: { Contact, News, Portofolio, Profile },
+  components: { Twitter, News, Portofolio, Profile, Contact },
   data() {
     return {
       tab: null,
-      tabs: ["Portofolio", "News", "Contact"]
+      tabs: ["Portofolio", "News", "Twitter"]
     };
   },
   methods: {}
